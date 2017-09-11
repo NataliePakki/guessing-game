@@ -3,20 +3,20 @@ class GuessingGame {
 
     setRange(min, max) {
         this.min = min;
-        this.max = max;
+        this.max = max;        
     }
 
     guess() {
-        this.result = Math.floor((this.max + this.min) / 2);
+        this.result = Math.ceil((this.max + this.min) / 2);
         return this.result;
     }
 
     lower() {
-        this.max = this.result - 1;
+        this.max = this.result;
     }
 
     greater() {
-        this.min = this.result + 1;
+        this.min = this.result;
     }
 }
 
